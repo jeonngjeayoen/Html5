@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문의하기 양식 만들기 과제</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table{
+            border-top: 1px solid #000;
+        }
+        tr{
+            padding: 10px 0;
+            display: block;
+            border-bottom: 1px solid #ccc;
+        }
+        tr:last-child{
+            border: 0;
+        }
+        .tit2{
+            display: block;
+            padding-left: 430px;
+        }
+        .btn-wrap {
+            display: block;
+            text-align: center;
+        }
+        .before{
+            text-align: right;
+        }
+        .star{
+            color: red;
+        }
+        .inner{
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .q-box {
+            width: 360px;
+            height: 30px;
+        }
+        .es-box {
+            width: 170px;
+            height: 30px;
+        }
+        .text-box{
+            width: 360px;
+            height: 26px;
+        }
+        .p-number, .p-box, .e-box{
+            width: 170px;
+            height: 26px;
+        }
+        .q-btn{
+            width: 150px;
+            height: 30px;
+            background-color: rgb(52, 51, 56);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .r-btn{
+            width: 150px;
+            height: 30px;
+            background-color: gray;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .tit{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="inner">
+    <p class="before"><span class="star">*</span>표시는 필수 입력 항목입니다.</p>
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    <span class="tit">
+                        <span class="star">*</span>
+                        <b>문의유형</b>
+                    </span>
+                    <span class="tit2">
+                    <select name="" id="" class="q-box">
+                        <option value="제품문의">제품문의</option>
+                        <option value="위치문의">위치문의</option>
+                        <option value="A/S문의">A/S문의</option>
+                        <option value="고객센터">고객센터</option>
+                    </select>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name" class="tit">
+                        <span class="star">*</span>
+                        <b>성함</b>
+                    </label>
+                    <span class="tit2">
+                    <input type="text" id="name" maxlength="16" class="text-box">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="comp" class="tit">
+                        <span class="star">*</span>
+                        <b>회사명</b>
+                    </label>
+                    <span class="tit2">
+                    <input type="text" id="comp" maxlength="16" class="text-box">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pos" class="tit">
+                        <span class="star">*</span>
+                        <b>직급</b>
+                    </label>
+                    <span class="tit2">
+                    <input type="text" id="pos" maxlength="16" class="text-box">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="part" class="tit">
+                        <span class="star">*</span>
+                        <b>부서명</b>
+                    </label>
+                    <span class="tit2">
+                    <input type="text" id="part" maxlength="16" class="text-box">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="tit">
+                        <span class="star">*</span>
+                        <b>회사규모</b>
+                    </span>
+                    <span class="tit2">
+                    <select name="number" id="number" class="q-box">
+                        <option value="number">1~50</option>
+                        <option value="number">1~50</option>
+                        <option value="number">1~50</option>
+                        <option value="number">1~50</option>
+                    </select>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="tit">
+                        <span class="star">*</span>
+                        <b>기관구분</b>
+                    </span>
+                    <span class="tit2">
+                    <input type="radio" checked name="sep" id="comp01">
+                    <label for="comp01">기업</label>
+                    <input type="radio"  name="sep" id="comp02">
+                    <label for="comp02">공공</label>
+                    <input type="radio"  name="sep" id="comp03">
+                    <label for="comp03">금융</label>
+                    <input type="radio"  name="sep" id="comp04">
+                    <label for="comp04">교육</label>
+                    <input type="radio"  name="sep" id="comp05">
+                    <label for="comp05">기타</label>
+                    </span>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    <span class="tit">
+                        <span class="star">*</span>
+                        <b>전화번호</b>
+                    </span>
+                    <span class="tit2">
+                    <select name="" id="" class="p-number">
+                        <option value="010">010</option>
+                        <option value="070">070</option>
+                        <option value="051">051</option>
+                        <option value="02">02</option>
+                    </select>
+                    -
+                    <input type="tel" name="phone1" maxlength="4" class="p-box">
+                    -
+                    <input type="tel" name="phone1" maxlength="4" class="p-box">
+                    </span>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <span class="tit">
+                        <span class="star">*</span>
+                        <b>E-mail</b>
+                    </span>
+                    <span class="tit2">
+                    <input type="text" class="e-box">
+                    @
+                    <input type="text" class="e-box">
+                    <select name="" id="" class="es-box">
+                        <option value="메일계정선택">메일계정선택</option>
+                        <option value="naver">naver.com</option>
+                        <option value="daum">daum.net</option>
+                        <option value="google">google.com</option>
+                    </select>
+                    </span>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <b class="tit">문의제품</b>
+                    <span class="tit2">
+                    <input type="checkbox" id="p01"><label for="p01">PC 화면 보안</label>
+                    <input type="checkbox" id="p02"><label for="p02">모바일 App 보안</label>
+                    <input type="checkbox" id="p03"><label for="p03">멀티미디어 보안</label>
+                    <input type="checkbox" id="p04"><label for="p04">CCTV 보안</label>
+                    <input type="checkbox" id="p05"><label for="p05">문서 DRM</label>
+                    <input type="checkbox" id="p06"><label for="p06">웹 위변조 보안</label>
+                    <input type="checkbox" id="p07"><label for="p07">취약점 통합 보안</label>
+                    <input type="checkbox" id="p08"><label for="p08">기타</label>
+                    </span>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <span class="tit">
+                        <span class="star">*</span>
+                        <b>방문경로</b>
+                    </span>
+                    <span class="tit2">
+                    <input type="radio" checked name="sep" id="tos01">
+                    <label for="tos01">네이버검색</label>
+                    <input type="radio"  name="sep" id="tos02">
+                    <label for="tos02">구글 검색</label>
+                    <input type="radio"  name="sep" id="comp03">
+                    <label for="comp03">다음 검색</label>
+                    <input type="radio"  name="sep" id="tos04">
+                    <label for="tos04">보도자료</label>
+                    <input type="radio"  name="sep" id="tos05">
+                    <label for="tos05">신문광고</label>
+                    <input type="radio"  name="sep" id="tos06">
+                    <label for="tos06">온라인광고</label>
+                    <input type="radio"  name="sep" id="tos07">
+                    <label for="tos07">지인소개</label>
+                    <input type="radio"  name="sep" id="tos08">
+                    <label for="tos08">뉴스레터</label>
+                    <input type="radio"  name="sep" id="tos09">
+                    <label for="tos09">기타</label>
+                    <input type="text" id="tos09">
+                    </span>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <b class="tit">문의내용</b>
+                    <span class="tit2">
+                    <textarea rows="20" cols="100">
+                    </textarea>
+                    </span>
+                </td>
+             </tr>
+             <tr>
+                <td class="btn-wrap">
+                    <input type="submit" value="문의하기" class="q-btn">
+                    <input type="reset" value="취소하기" class="r-btn">
+                </td>
+             </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>
